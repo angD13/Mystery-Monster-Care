@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Monster Care</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Mystery Monster Care</h1>
+        </header>
+
+        <main>
+            <section class="monster-display">
+                <img id="monster-image" src="monster-egg.png" alt="Mystery Monster" aria-label="Your monster appears here">
+            </section>
+
+            <section class="stats">
+                <div class="stat">
+                    <span class="stat-label">Hunger:</span>
+                    <div class="stat-bar">
+                        <div id="hunger-bar" class="stat-fill" style="width: 0%;"></div>
+                    </div>
+                    <span id="hunger-value" class="stat-value">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Happiness:</span>
+                    <div class="stat-bar">
+                        <div id="happiness-bar" class="stat-fill" style="width: 0%;"></div>
+                    </div>
+                    <span id="happiness-value" class="stat-value">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Energy:</span>
+                    <div class="stat-bar">
+                        <div id="energy-bar" class="stat-fill" style="width: 0%;"></div>
+                    </div>
+                    <span id="energy-value" class="stat-value">0</span>
+                </div>
+            </section>
+
+            <section class="actions">
+                <h2>Actions</h2>
+                <div class="action-buttons">
+                    <button id="feed-btn" class="action-btn" data-action="feed">Feed</button>
+                    <button id="play-btn" class="action-btn" data-action="play">Play</button>
+                    <button id="sleep-btn" class="action-btn" data-action="sleep">Sleep</button>
+                    <button id="clean-btn" class="action-btn" data-action="clean">Clean</button>
+                </div>
+                
+                <div class="badges" id="badges-container">
+                    <!-- Badges will appear here -->
+                </div>
+            </section>
+
+            <section class="inventory">
+                <h2>Inventory</h2>
+                <div id="inventory-items">
+                    <!-- Inventory items will appear here -->
+                </div>
+            </section>
+
+            <section class="reveal-section">
+                <button id="reveal-btn" class="reveal-btn" disabled>Reveal Monster</button>
+                <div id="monster-result" class="monster-result" aria-live="polite">
+                    <!-- Monster reveal result will appear here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
